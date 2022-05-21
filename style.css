@@ -33,25 +33,48 @@ input[type=number] {
 }
 
 body {
-  background-color: var(--light-grayish-cyan);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    background-color: var(--light-grayish-cyan);
+    height: 100vh;
+
+
+}
+
+.content {
+    height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+}
+
+header {
+    padding-top: 30px;
+    margin: 30px auto;
+
+}
+
+#logo {
+    width: 90px;
+    height: auto;
+
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  width: 920px;
+  max-width: 920px;
   height: 480px;
   padding: 30px;
-  margin: auto;
-
+  margin: 0 auto;
+  margin-top: 60px;
   border-radius: 30px;
   background-color: var(--white);
 }
+
+@media screen and (max-width: 644px) {
+    .container {
+height: auto;    }
+  }
 
 .container-calc {
     flex: 1;
@@ -66,6 +89,9 @@ body {
 .container-result {
 flex: 1;
 padding: 30px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 
 border-radius: 30px;
 background-color: var(--very-dark-cyan);
@@ -86,7 +112,7 @@ h1 {
     gap: 10px;
 }
 
-
+/* Percentage fields */
 .tip-percentage {
     width: 116px;
     height: 48px;
@@ -104,9 +130,15 @@ h1 {
 #custom {
     color: var(--dark-grayish-cyan);
     background-color: var(--very-light-grayish-cyan);
+    text-align: center;
 }
 
-.tip-percentage:hover {
+.customtip {
+    outline: 2px solid var(--strong-cyan-primary);
+}
+
+.tip-percentage:hover,
+.clicked {
     color: var(--very-dark-cyan);
     background-color: var(--strong-cyan-primary);
     cursor: pointer;
@@ -122,6 +154,12 @@ input[type='number'].tip-custom {
 .container-input {
     position: relative;
     border: 0;
+
+}
+
+#title-responsive{
+    padding-top: 15px;
+
 }
 
 .icon {
@@ -135,8 +173,9 @@ input[type='number'].tip-custom {
 }
 
 input[type='number'] {
-    width: 368px;
+    width: 100%;
     height: 44px;
+    
 
     background-color: var(--very-light-grayish-cyan);
     border: 0;
@@ -153,6 +192,11 @@ input[type='number'] {
     padding-right: 20px;
 
 }
+
+#bill,
+#people {
+    min-width: 300px;
+}
 input[type='number']:hover {
     cursor: pointer;
 
@@ -165,7 +209,54 @@ input[type='number']:focus {
 }
 
 .cantzero {
-    outline: none;
-    border: 2px orange;
+    outline: 2px solid rgb(255, 77, 0);
 
+}
+
+/* Result cards */
+
+.container-card {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    margin-top: 40px;
+ 
+}
+
+.result-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+.title-result {
+color: var(--very-light-grayish-cyan);
+padding-bottom: 0;
+}
+
+.subtitle-result {
+color: var(--grayish-cyan);
+font-size: 12px;
+}
+
+.result-value {
+    color:var(--strong-cyan-primary);
+    font-size: 35px;
+}
+
+button {
+    height: 45px;
+    font-size: var(--big-text);
+    background-color: var(--strong-cyan-primary);
+    color: var(--very-dark-cyan);
+    border-radius: 6px;
+    text-transform: uppercase;
+    border: 0;
+
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--light-grayish-cyan);
 }
