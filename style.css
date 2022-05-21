@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+/* Hide arrows from Input Number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+* {
+  font-family: "Space Mono", monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --strong-cyan-primary: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+
+  --big-text: 22px;
+
+}
+
+body {
+  background-color: var(--light-grayish-cyan);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 920px;
+  height: 480px;
+  padding: 30px;
+  margin: auto;
+
+  border-radius: 30px;
+  background-color: var(--white);
+}
+
+.container-calc {
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 0;
+
+}
+
+.container-result {
+flex: 1;
+padding: 30px;
+
+border-radius: 30px;
+background-color: var(--very-dark-cyan);
+
+}
+h1 {
+    color: var(--dark-grayish-cyan);
+    font-size: 16px;
+    padding-bottom: 15px;
+  }
+  
+
+
+.container-percentage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+.tip-percentage {
+    width: 116px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--white);
+    background-color: var(--very-dark-cyan);
+    border-radius: 6px;
+
+    font-size: var(--big-text);
+}
+
+#custom {
+    color: var(--dark-grayish-cyan);
+    background-color: var(--very-light-grayish-cyan);
+}
+
+.tip-percentage:hover {
+    color: var(--very-dark-cyan);
+    background-color: var(--strong-cyan-primary);
+    cursor: pointer;
+}
+
+input[type='number'].tip-custom {
+    width: 116px;
+    height: 48px;
+}
+
+
+/*input fields*/
+.container-input {
+    position: relative;
+    border: 0;
+}
+
+.icon {
+    position:absolute;
+    top: 14px;
+    left: 20px;
+
+}
+::placeholder {
+    color: var(--grayish-cyan);
+}
+
+input[type='number'] {
+    width: 368px;
+    height: 44px;
+
+    background-color: var(--very-light-grayish-cyan);
+    border: 0;
+    border-radius: 6px;
+
+    font-size: var(--big-text);
+    text-align: right;
+
+    color: var(--very-dark-cyan);
+
+    background-image: url(./images/icon-person.svg));
+  background-repeat: no-repeat;
+  background-position: 2px 3px;
+    padding-right: 20px;
+
+}
+input[type='number']:hover {
+    cursor: pointer;
+
+}
+
+input[type='number']:focus {
+    outline: none;
+    cursor: pointer;
+    border: 2px solid var(--strong-cyan-primary);
+}
+
+.cantzero {
+    outline: none;
+    border: 2px orange;
+
+}
