@@ -12,8 +12,11 @@ bill.addEventListener("change", () => {
     amount = parseInt(bill.value);
   if (amount > 0) {
     bill.classList.remove("cantzero");
+    removeError("bill")
     calculate();
   } else {
+    noResult()
+    displayError("bill");
     bill.classList.add("cantzero");
   }
   });
@@ -28,6 +31,7 @@ for (btn of tipPercentages) {
     customTip.value = "";
     customTip.classList.remove("cantzero");
     customTip.classList.remove("customtip");
+    removeError("tip")
     calculate();
   });
 }
@@ -37,10 +41,12 @@ customTip.addEventListener("change", () => {
     if (percentage > 0) {
         customTip.classList.remove("cantzero");
         customTip.classList.add("customtip");
-
+        removeError("tip")
         calculate();
         removeSelection();
       } else {
+        noResult()
+        displayError("tip");
         customTip.classList.add("cantzero");
         customTip.classList.remove("customtip");
 
@@ -61,8 +67,11 @@ people.addEventListener("change", () => {
   amount = parseInt(people.value);
   if (amount > 0) {
     people.classList.remove("cantzero");
+    removeError("people")
     calculate();
   } else {
+    noResult()
+    displayError("people");
     people.classList.add("cantzero");
   }
 });
@@ -71,22 +80,31 @@ people.addEventListener("change", () => {
 function calculate() {
   if (bill.value && percentage && people.value) {
     let resultTip = calculateTip();
-    calculateTotal(resultTip);  }
+    calculateTotal(resultTip);}
 }
 
 //calculate tip
 function calculateTip() {
     tip.textContent = "";
     let resultTip = ((parseInt(bill.value) * percentage) / parseInt(people.value)).toFixed(2);
+    if (resultTip > 0) {
     tip.textContent = "$" + resultTip;
     return resultTip;
+    }
+    else {
+        noResult()
+    }
 }
 
 //calculate total
 function calculateTotal(resultTip) {
     total.textContent = "";
     let resultTotal = (parseInt(bill.value) / parseInt(people.value) + parseInt(resultTip)).toFixed(2);
-    total.textContent = "$" + resultTotal;
+    if (resultTotal > 0) {
+    total.textContent = "$" + resultTotal;}
+    else {
+        noResult()
+    }
 }
 
 // reset
@@ -102,3 +120,18 @@ function reset() {
   total.textContent = "$0.00";
   removeSelection();
 }
+
+function noResult() {
+    tip.textContent = "$0.00";
+    total.textContent = "$0.00";
+}
+
+function displayError(id) {
+ let error = document.getElementById(`${id}-error`)
+error.textContent = "Can't be less or equal to 0";
+}
+
+function removeError(id) {
+    let error = document.getElementById(`${id}-error`)
+   error.textContent = "";
+   }
