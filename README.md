@@ -27,7 +27,8 @@ Users should be able to:
 ### Screenshot
 
 ![](./screenshot-web.png)
-![](./screenshot-mobile.png =x100px)
+
+<img src="./screenshot-mobile.png" alt="drawing" height="50px"/>
 
 ### Links
 
