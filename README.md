@@ -28,7 +28,7 @@ Users should be able to:
 
 ![](./screenshot-web.png)
 
-<img src="./screenshot-mobile.png" alt="drawing" height="50px"/>
+<img src="./screenshot-mobile.png" alt="drawing" height="400px"/>
 
 ### Links
 
