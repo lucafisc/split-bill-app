@@ -8,10 +8,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
@@ -35,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX/hub/responsive-split-bill-app-iZ8y7eRZ3W)
-- Live Site URL: [Add live site URL here](https://lucafisc.github.io/split-bill-app/)
+- Solution URL: (https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX/hub/responsive-split-bill-app-iZ8y7eRZ3W)
+- Live Site URL: (https://lucafisc.github.io/split-bill-app/)
 
 ### Useful resources
 
