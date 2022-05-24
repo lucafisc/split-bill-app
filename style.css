@@ -34,21 +34,28 @@ input[type=number] {
 
 body {
     background-color: var(--light-grayish-cyan);
-    height: 100vh;
 
 
 }
 
 .content {
-    height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-content: center;
 }
 
 header {
-    margin: 10px auto;
-    min-height: 110px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 110px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+
     /* padding-top: 30px;
     margin: 30px auto; */
 
@@ -68,7 +75,6 @@ header {
   height: 480px;
   padding: 30px;
   margin: 0 auto;
-  margin-top: 60px;
   border-radius: 30px;
   background-color: var(--white);
 }
