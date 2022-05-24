@@ -27,7 +27,7 @@ Users should be able to:
 ### Screenshot
 
 ![](./screenshot-web.png)
-![](./screenshot-mobile.png)
+![](./screenshot-mobile.png =x100px)
 
 ### Links
 
