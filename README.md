@@ -45,4 +45,4 @@ Users should be able to:
 
 ## Acknowledgments
 
-Thanks to [@Eskabore](https://github.com/Eskabore) and [@Sammeeey](https://github.com/Sammeeey) for help on preventing mobile version to scroll horizontally.
+Thanks to [@Eskabore](https://github.com/Eskabore), [@Sammeeey](https://github.com/Sammeeey), and Linda T. for help on preventing mobile version to scroll horizontally.
